@@ -5,6 +5,11 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
+const MoviesDB = require("./modules/moviesDB.js");
+
+
+const db = new MoviesDB();
+
 
 app.use(bodyParser.json());
 
