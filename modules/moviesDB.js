@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const movieSchema = new Schema({
-  plot: String,
+
+    plot: String,
   genres: [String],
   runtime: Number,
   cast: [String],
@@ -40,14 +41,17 @@ const movieSchema = new Schema({
 }
 );
 
+ 
 module.exports = class MoviesDB {
   constructor() {
     // We don't have a `Movie` object until initialize() is complete
     this.Movie = null;
-  }
+  };
 
+  
   // Pass the connection string to `initialize()`
   initialize(connectionString) {
+     connectionString = "mongodb+srv://simar:Atlas123@senecaweb.pvkyjrm.mongodb.net/sample_mflix?retryWrites=true&w=majority";
     return new Promise((resolve, reject) => {
       const db = mongoose.createConnection(
         connectionString,
