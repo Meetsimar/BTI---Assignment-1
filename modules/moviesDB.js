@@ -51,7 +51,7 @@ module.exports = class MoviesDB {
   
   // Pass the connection string to `initialize()`
   initialize(connectionString) {
-     connectionString = "mongodb+srv://simar:Atlas123@senecaweb.pvkyjrm.mongodb.net/sample_mflix?retryWrites=true&w=majority";
+     // connectionString = "mongodb+srv://simar:Atlas123@senecaweb.pvkyjrm.mongodb.net/sample_mflix?retryWrites=true&w=majority";
     return new Promise((resolve, reject) => {
       const db = mongoose.createConnection(
         connectionString,
